@@ -125,7 +125,7 @@ function initScanPage() {
         const formData = new FormData();
         formData.append('file', selectedFile);
 
-        const API_URL = 'http://127.0.0.1:5000/predict'; 
+        const API_URL = 'https://blaziooon-tubris.hf.space/predict'; 
         
         try {
             const response = await fetch(API_URL, {
