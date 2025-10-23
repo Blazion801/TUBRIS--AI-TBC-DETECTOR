@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skrining AI - TUBRIS</title>
+    
+    <link rel="icon" href="assets/logo_2.png" type="image/png">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                
+                <a href="index.html" class="nav-logo" style="display: flex; align-items: center; gap: 8px;">
+                    <img src="assets/logo_2.png" alt="TUBRIS Logo" style="height: 30px; width: auto;">
+                    <b>TUBRIS</b>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li><a href="scan.html" class="nav-link active">Skrining AI</a></li>
+                    <li><a href="edukasi.html" class="nav-link">Edukasi TB</a></li>
+                    <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section class="scanner-section">
+            <div class="scanner-container">
+                <h2>Unggah Citra Rontgen</h2>
+                
+                <div class="disclaimer-box">
+                    <strong>PERHATIAN:</strong> Hasil dari TUBRIS <strong>bukanlah</strong> diagnosis medis.
+                    Sistem ini adalah alat bantu skrining (triase) dan tidak menggantikan
+                    konsultasi dengan radiolog atau dokter. Segera hubungi fasilitas
+                    kesehatan untuk diagnosis konfirmasi.
+                </div>
+
+                <div class="upload-area">
+                    <input type="file" id="xray-input" accept="image/png, image/jpeg, image/dicom" style="display: none;">
+                    
+                    <label for="xray-input" class="upload-label">
+                        <span>Deteksi dini TBC dengan AI</span>
+                        <p>Seret & Jatuhkan gambar, atau <u>klik untuk memilih file</u>.</p>
+                        <span>(Format: .jpg, .png)</span>
+                    </label>
+                </div>
+
+                <div class="preview-area" id="preview-container" style="display: none;">
+                    <h3>Preview Gambar:</h3>
+                    <img id="image-preview" src="#" alt="Preview X-Ray">
+                </div>
+
+                <button id="scan-btn" class="btn btn-primary" disabled>
+                    Analisis Gambar
+                </button>
+            </div>
+        </section>
+
+        <section class="results-section" id="results-section" style="display: none;">
+            <div class="results-container">
+                <h2>Hasil Analisis</h2>
+
+                <div class="spinner-container" id="loading-spinner">
+                    <div class="spinner"></div>
+                    <p>Model AI sedang menganalisis. Mohon tunggu...</p>
+                </div>
+
+                <div class="result-content" id="result-content" style="display: none;">
+                    
+                    <h3 id="result-finding"></h3>
+                    <p id="result-score"></p>
+                    
+                    <div class="evidence-container" id="heatmap-container" style="display: none;">
+                        <h4>Visualisasi AI (Heatmap)</h4>
+                        <p>Area yang disorot menunjukkan fokus model AI dalam membuat keputusan.</p>
+                        <div class="evidence-images">
+                            <figure>
+                                <figcaption>Gambar Asli</figcaption>
+                                <img id="original-image-result" src="#" alt="Original X-Ray">
+                            </figure>
+                            <figure>
+                                <figcaption>Analisis Heatmap</figcaption>
+                                <img id="heatmap-image-result" src="#" alt="Heatmap Analysis">
+                            </figure>
+                        </div>
+                    </div>
+
+                    <p class="result-disclaimer">
+                        <strong>Ingat:</strong> Hasil ini hanya triase awal. 
+                        Konsultasikan dengan dokter untuk diagnosis pasti.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+           <p>&copy; 2025 Tim KYG (Kelvin, Yong, Gavinn) - Universitas Bina Nusantara</p>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

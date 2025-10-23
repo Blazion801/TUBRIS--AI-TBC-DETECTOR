@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang - TUBRIS</title>
+    
+    <link rel="icon" href="assets/logo_2.png" type="image/png">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                
+                <a href="index.html" class="nav-logo" style="display: flex; align-items: center; gap: 8px;">
+                    <img src="assets/logo_2.png" alt="TUBRIS Logo" style="height: 30px; width: auto;">
+                    <b>TUBRIS</b>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li><a href="scan.html" class="nav-link">Skrining AI</a></li>
+                    <li><a href="edukasi.html" class="nav-link">Edukasi TB</a></li>
+                    <li><a href="tentang.html" class="nav-link active">Tentang</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section class="about-section">
+            <div class="about-container">
+                <h2>Tentang Proyek TUBRIS</h2>
+                <p class="section-intro">
+                    Sistem ini dikembangkan untuk membantu mempercepat proses skrining
+                    awal tuberkulosis di Indonesia.
+                </p>
+
+                <div class="info-card">
+                    <h3>Tujuan Proyek</h3>
+                    <p>
+                        Proyek TUBRIS bertujuan untuk mengembangkan sebuah prototipe sistem cerdas 
+                        berbasis <b>DEEP LEARNING</b> yang mampu mengklasifikasikan citra rontgen dada 
+                        untuk memprioritaskan pasien suspek tuberkulosis. 
+                    </p>
+                    <p>
+                        Sistem ini dirancang untuk membantu tenaga kesehatan di fasilitas primer 
+                        dalam pengambilan keputusan rujukan tes konfirmasi (seperti Xpert MTB/RIF), 
+                        sehingga mengurangi keterlambatan diagnosis dan mengoptimalkan 
+                        sumber daya kesehatan.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Model AI (EfficientNet)</h3>
+                    <p>
+                        Inti dari sistem ini adalah model <b>DEEP LEARNING</b> dari keluarga 
+                        <strong>EfficientNet</strong>. Arsitektur ini dipilih karena 
+                        efisiensinya yang tinggi, mampu mencapai akurasi sangat baik 
+                        dengan ukuran model yang relatif kecil.
+                    </p>
+                    <p>
+                        Model ini dilatih menggunakan teknik <b>TRANSFER LEARNING</b> pada dataset 
+                        publik (Kaggle) yang berisi ribuan citra rontgen dada 
+                        (CXR) yang telah dilabeli (Normal dan Tuberkulosis).
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Tim Pengembang (KYG)</h3>
+                    <div class="team-grid-container">
+                        <div class="team-member-card">
+                            <h4>Nathanael S.</h4>
+                            <p class="nim">2802395995</p>
+                            <p class="role">Frontend Developer / AI Engineer</p>
+                        </div>
+                        <div class="team-member-card">
+                            <h4>Gavinn A.</h4>
+                            <p class="nim">2802397262</p>
+                            <p class="role">Frontend Developer / AI Engineer</p>
+                        </div>
+                        <div class="team-member-card">
+                            <h4>Kelvin L.</h4>
+                            <p class="nim">2802398864</p>
+                            <p class="role">Frontend Developer / AI Engineer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card text-center">
+                    <h3>Institusi Pendukung</h3>
+                    <p style="margin-top: 1rem;">
+                        Proyek ini dikembangkan oleh mahasiswa 
+                        <strong>Universitas Bina Nusantara</strong>.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+           <p>&copy; 2025 Tim KYG (Kelvin, Yong, Gavinn) - Universitas Bina Nusantara</p>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
